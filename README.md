@@ -10,7 +10,7 @@ Welcome to the arteria Design and Style Guide
   * [Indentation](#indentation)
   * [Line length](#line-length)
 * [Django](#django)
-  * [Providing an API](#providing-an-api)
+  * [Providing an API](#providing-an-internal-api)
   * [URLs](#urls)
 * [JavaScript](#javascript)
 * [CSS](#css)
