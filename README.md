@@ -7,6 +7,7 @@ Welcome to the arteria Design and Style Guide
 * [General](#general)
     * [Code Tags](#code-tags)
 * [Python](#python)
+    * [Encoding](#encoding)
     * [Imports](#imports)
     * [Indentation](#indentation)
     * [Line length](#line-length)
@@ -46,6 +47,12 @@ Valid for all Languages and files.
 
 This is not a complete Python style guide. In general we follow the [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). Points discussed here are prefered by the arteria developer team.
 
+#### Encoding
+
+Add a magic comment to **all** python files to define the Encoding ([Source](https://www.python.org/dev/peps/pep-0263/)). Our default is **utf-8**.
+
+    # -*- coding: utf-8 -*-
+
 #### Imports
 
 ##### Multi-Line and Long Imports
@@ -60,7 +67,7 @@ However if a line gets too long, avoid multi-line imports with backslash continu
 
     models.GroupManager()
 
-> **Note**: import * is never an option ;-)
+> **Note**: `import *` is never an option ;-)
 
 ##### Absolute and Relative Imports
 
