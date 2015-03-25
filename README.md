@@ -16,9 +16,11 @@ Welcome to the arteria Design and Style Guide
 * [Django](#django)
     * [Providing an API](#providing-an-internal-api)
     * [URLs](#urls)
+    * [Best Practices](#best-practices)
 * [JavaScript](#javascript)
 * [CSS](#css)
 * [HTML](#html)
+    * [UX](#ux)
 
 ### General
 
@@ -117,10 +119,63 @@ If you implement an internal, per package API, follow this example below.
 
 Do not use `_` in URLs, use `-` instead.
 
+#### Best Practices
+
+##### Make use of `settings.USE_TZ`
+
+    import time
+    from datetime import datetime
+
+    from django.conf import settings
+
+    def _now():
+        if settings.USE_TZ:
+            return timezone.now()
+        return datetime.now()
+
+
 ### JavaScript
+
+.
+
 
 ### CSS
 
+.
+
+
 ### HTML
 
+
+#### Indentation
+
 Indent by using 2 spaces. Never use tabs.
+
+
+#### UX
+
+##### HTML5 "input types"
+
+`<input type="text">` was doing a decent job for decades, but now we have all sorts of inputs, "number" and "email" being the most beneficial ones. Here's the full list:
+
+* `<input type="color">`
+* `<input type="date">`
+* `<input type="datetime">`
+* `<input type="datetime-local">`
+* `<input type="email">`
+* `<input type="month">`
+* `<input type="number">`
+* `<input type="range">`
+* `<input type="search">`
+* `<input type="tel">`
+* `<input type="time">`
+* `<input type="url">`
+* `<input type="week">`
+
+##### Labels "for" checkboxes and radios
+
+**Always** use a "for" label next to a checkbox or a radiobutton, so the user can click the text to change the "checked" state, not the little box. `<input type="checkbox" id="cb1"> <label for="cb1">` is the best practice.
+
+##### Input text "placeholder"
+
+Add placeholder text to your inputs.
