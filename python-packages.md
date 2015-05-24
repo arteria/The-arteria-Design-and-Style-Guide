@@ -1,6 +1,8 @@
 # Python Packages
 
 ## Versioning
+
+Please refere to [this post in the arteria blog](https://www.arteria.ch/de/blog/versionierung-von-web-und-mobile-applikationen/) about how we version and release software.
 ### Bumpversion
 
 ## Classifier
