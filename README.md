@@ -146,6 +146,7 @@ Do not use `_` in URLs, use `-` instead.
 
 ### HTML
 
+This one seems obvious, but use proper and valid markup.
 
 #### Indentation
 
