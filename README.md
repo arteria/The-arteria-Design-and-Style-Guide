@@ -121,17 +121,15 @@ Do not use `_` in URLs, use `-` instead.
 
 #### Best Practices
 
-##### Make use of [`settings.USE_TZ`](https://docs.djangoproject.com/en/1.7/ref/settings/#std:setting-USE_TZ)
+#####Make use of [`settings.USE_TZ`](https://docs.djangoproject.com/en/1.7/ref/settings/#std:setting-USE_TZ)
 
-    import time
-    from datetime import datetime
+Django timezone instead of datetime
 
-    from django.conf import settings
 
-    def _now():
-        if settings.USE_TZ:
-            return timezone.now()
-        return datetime.now()
+    from django.utils import timezone
+
+    timezone.now()
+
 
 
 ### JavaScript
